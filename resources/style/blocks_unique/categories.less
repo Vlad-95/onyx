@@ -1,0 +1,40 @@
+.categories {
+  border-bottom: 1px dashed #e3e7e9;
+  padding: 40px 0 56px;
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .item {
+    width: calc(100% / 5);
+    padding: 0 40px;
+
+    &:nth-of-type(5n - 4) {
+      padding-left: 0;
+    }
+
+    &:nth-of-type(5n) {
+      padding-right: 0;
+    }
+
+    &:not(:last-of-type) {
+      border-right: 1px solid #e3e7e9;
+    }
+
+    .image {
+      margin-bottom: 12px;
+    }
+
+    .text {
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.2;
+
+      span {
+        color: @green;
+      }
+    }
+  }
+}
