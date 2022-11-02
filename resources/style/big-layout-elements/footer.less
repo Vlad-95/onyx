@@ -79,3 +79,79 @@
     }
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .footer {
+    .info {
+      p,
+      a {
+        font-size: 12px;
+      }
+    }
+
+    .rights {
+      .copyright {
+        font-size: 12px;
+
+        span {
+          top: -6px;
+        }
+      }
+
+      .siluet {
+        font-size: 12px;
+
+        svg {
+          top: -6px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .footer {
+    &__wrap {
+      display: block;
+    }
+
+    .logo {
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
+    .info {
+      margin-left: -13px;
+
+      p,
+      a {
+        margin: 0 0 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    .info {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-left: 0;
+
+      p,
+      a {
+        padding: 0;
+        border: none !important;
+      }
+    }
+
+    .rights {
+      display: block;
+
+      .copyright {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
