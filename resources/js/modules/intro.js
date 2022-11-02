@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import 'slick-carousel';
 
 const intro = () => {
   if ($('.intro .slider').length) {

@@ -16,9 +16,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! slick-carousel */ "./node_modules/slick-carousel/slick/slick.js");
-/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_2__);
-
 
 
 
@@ -90,6 +87,35 @@ var menu = function menu() {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (menu);
+
+/***/ }),
+
+/***/ "./resources/js/modules/news-slider.js":
+/*!*********************************************!*\
+  !*** ./resources/js/modules/news-slider.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var gallery = function gallery() {
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.news-detail .slider').length) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.news-detail .slider').slick({
+      slidesToShow: 1,
+      nextArrow: '<button type="button" class="slick-next"><svg><use xlink:href="img/icons/sprite.svg#arrow"></use></svg></button>',
+      prevArrow: '<button type="button" class="slick-prev"><svg><use xlink:href="img/icons/sprite.svg#arrow"></use></svg></button>'
+    });
+  }
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (gallery);
 
 /***/ }),
 
@@ -16025,14 +16051,20 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _modules_intro__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/intro */ "./resources/js/modules/intro.js");
-/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/menu */ "./resources/js/modules/menu.js");
+/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! slick-carousel */ "./node_modules/slick-carousel/slick/slick.js");
+/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modules_intro__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/intro */ "./resources/js/modules/intro.js");
+/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/menu */ "./resources/js/modules/menu.js");
+/* harmony import */ var _modules_news_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/news-slider */ "./resources/js/modules/news-slider.js");
+
+
 
 
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
-  (0,_modules_intro__WEBPACK_IMPORTED_MODULE_1__["default"])();
-  (0,_modules_menu__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  (0,_modules_intro__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  (0,_modules_menu__WEBPACK_IMPORTED_MODULE_3__["default"])();
+  (0,_modules_news_slider__WEBPACK_IMPORTED_MODULE_4__["default"])();
 });
 })();
 
