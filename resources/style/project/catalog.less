@@ -1,0 +1,39 @@
+.catalog {
+  padding-bottom: 106px;
+
+  .wysiwyg {
+    ul {
+      li {
+        padding-left: 21px;
+
+        &:before {
+          content: '';
+          width: 6px;
+          height: 6px;
+          border-radius: 100px;
+          top: 7px;
+        }
+      }
+    }
+
+    ol {
+      li {
+        padding-left: 21px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .catalog {
+    .wysiwyg {
+      ul {
+        li {
+          &:before {
+            top: 3px;
+          }
+        }
+      }
+    }
+  }
+}

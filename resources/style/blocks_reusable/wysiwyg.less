@@ -100,6 +100,52 @@
 
   h5 {
     font-size: 20px;
+    font-weight: 700;
+  }
+
+  .scroll-table {
+    margin: 32px 0;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      height: 6px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #e3e7e9;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: @green;
+      border-radius: 20px;
+    }
+  }
+
+  table {
+    width: 100%;
+    min-width: 992px;
+    border: 1px solid #e3e7e9;
+
+    tr {
+      &:first-child {
+        td {
+          background-color: @green;
+          font-size: 15px;
+          font-weight: 700;
+          color: @white;
+        }
+      }
+
+      &:not(:first-child) {
+        td {
+          font-size: 14px;
+        }
+      }
+    }
+
+    td {
+      padding: 17px 5px;
+      text-align: center;
+      border: 1px dashed #e3e7e9;
+    }
   }
 }
 
@@ -180,6 +226,22 @@
 
     h5 {
       font-size: 15px;
+    }
+
+    table {
+      tr {
+        &:first-child {
+          td {
+            font-size: 12px;
+          }
+        }
+
+        &:not(:first-child) {
+          td {
+            font-size: 12px;
+          }
+        }
+      }
     }
   }
 }

@@ -8573,6 +8573,35 @@ var gallery = function gallery() {
 
 /***/ }),
 
+/***/ "./resources/js/modules/tables.js":
+/*!****************************************!*\
+  !*** ./resources/js/modules/tables.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var tables = function tables() {
+  //оборачиваем div-ом все таблицы в визивиге, чтобы сделать скролл
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.wysiwyg').length) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.wysiwyg table').each(function () {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).before('<div class="scroll-table"></div>');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).prev('.scroll-table').append(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this));
+    });
+  }
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (tables);
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/a-callable.js":
 /*!******************************************************!*\
   !*** ./node_modules/core-js/internals/a-callable.js ***!
@@ -24874,18 +24903,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/menu */ "./resources/js/modules/menu.js");
 /* harmony import */ var _modules_news_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/news-slider */ "./resources/js/modules/news-slider.js");
 /* harmony import */ var _modules_map__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/map */ "./resources/js/modules/map.js");
+/* harmony import */ var _modules_tables__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/tables */ "./resources/js/modules/tables.js");
 
 
 
 
 
 
+
+ //Вызов карты будет работать только вне всех конструкций
 
 (0,_modules_map__WEBPACK_IMPORTED_MODULE_6__["default"])();
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   (0,_modules_intro__WEBPACK_IMPORTED_MODULE_3__["default"])();
   (0,_modules_menu__WEBPACK_IMPORTED_MODULE_4__["default"])();
   (0,_modules_news_slider__WEBPACK_IMPORTED_MODULE_5__["default"])();
+  (0,_modules_tables__WEBPACK_IMPORTED_MODULE_7__["default"])();
 });
 })();
 
