@@ -34,6 +34,7 @@
     "path": "^0.12.7",
     "postcss": "^8.4.13",
     "postcss-preset-env": "^7.4.4",
+    "select2": "^4.1.0-rc.0",
     "slick-carousel": "^1.8.1",
     "webpack": "^5.72.0",
     "webpack-stream": "^7.0.0"
