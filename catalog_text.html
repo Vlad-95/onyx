@@ -204,7 +204,9 @@
 
           <div class="page-title">
             <h1>Crystals</h1>
-            <button type="button" class="btn btn_green">Get a Quote</button>
+            <button type="button" class="btn btn_green" data-trigger="quote">
+              Get a Quote
+            </button>
           </div>
 
           <div class="wysiwyg">
@@ -282,6 +284,159 @@
         </div>
       </div>
     </main>
+
+    <div class="modal-container" data-modal="feedback">
+      <div class="modal-wrap">
+        <div class="modal">
+          <div class="title">Talk to Sales</div>
+          <div class="close"></div>
+          <form action="" class="form">
+            <div class="form__item">
+              <div class="name">Full name*</div>
+              <input type="text" class="input error" />
+            </div>
+            <div class="form__item">
+              <div class="name">Phone number*</div>
+              <input type="text" class="input" />
+            </div>
+            <div class="form__item">
+              <div class="name">Email*</div>
+              <input type="text" class="input" />
+            </div>
+            <div class="form__item">
+              <div class="name">Your message*</div>
+              <textarea name="" id="" class="textarea"></textarea>
+            </div>
+
+            <div class="form__footer">
+              <label class="form__agree">
+                <input type="checkbox" class="checkbox" name="agree" id="" />
+                <div class="text">
+                  <span
+                    >I agree with
+                    <a href="javascript:;">Privacy Policy</a></span
+                  >
+                </div>
+              </label>
+
+              <button type="submit" class="btn btn_green">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-container" data-modal="quote">
+      <div class="modal-wrap">
+        <div class="modal">
+          <div class="title">Request For Quote</div>
+          <div class="close"></div>
+          <form action="" class="form">
+            <div class="form__block">
+              <div class="name">Contacts details</div>
+
+              <div class="form__row">
+                <div class="form__item">
+                  <div class="name">Full name*</div>
+                  <input type="text" class="input error" />
+                </div>
+                <div class="form__item">
+                  <div class="name">Your company*</div>
+                  <input type="text" class="input error" />
+                </div>
+              </div>
+
+              <div class="form__row">
+                <div class="form__item">
+                  <div class="name">Phone number*</div>
+                  <input type="text" class="input" />
+                </div>
+                <div class="form__item">
+                  <div class="name">Email*</div>
+                  <input type="text" class="input" />
+                </div>
+              </div>
+
+              <div class="attention">
+                Fields marked with «*» symbol are mandatory. Please specify your
+                detailed and full contact information, in order for our managers
+                to be able to contact you regarding your request.
+              </div>
+            </div>
+
+            <div class="form__block">
+              <div class="name">Requested product</div>
+
+              <div class="form__row product">
+                <div class="form__item">
+                  <div class="name">Product type</div>
+                  <select name="" id="" class="select">
+                    <option value=""></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                </div>
+
+                <div class="form__item">
+                  <div class="name">Quantity</div>
+                  <input type="text" class="input" />
+                </div>
+              </div>
+
+              <div class="form__item">
+                <div class="name">Additional requirements</div>
+                <textarea name="" id="" class="textarea"></textarea>
+              </div>
+
+              <div class="attention">
+                Please choose product type, then select model and specify its
+                full designation in accordance with Morion’s data sheet. In case
+                for some reason you are not able to do that, please choose «Fill
+                custom specification» option after you select required product
+                type
+              </div>
+            </div>
+
+            <div class="form__block">
+              <div class="name">Upload specification</div>
+
+              <div class="form__file">
+                <input type="file" class="file" name="" id="" />
+                <div class="filename"></div>
+                <div class="add">Open</div>
+                <div class="remove"></div>
+              </div>
+
+              <a href="javascript:;" class="download btn btn_green"
+                >Download custom specification template</a
+              >
+            </div>
+            <div class="form__footer">
+              <label class="form__agree">
+                <input type="checkbox" class="checkbox" name="agree" id="" />
+                <div class="text">
+                  <span
+                    >I agree with
+                    <a href="javascript:;">Privacy Policy</a></span
+                  >
+                </div>
+              </label>
+
+              <label class="form__agree">
+                <input type="checkbox" class="checkbox" name="copy" id="" />
+                <div class="text">
+                  <span>Send a copy of this request to my e-mail</span>
+                </div>
+              </label>
+
+              <button type="submit" class="btn btn_green">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <footer class="footer">
       <div class="wrapper">

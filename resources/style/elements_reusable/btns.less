@@ -3,9 +3,14 @@
   border: none;
   outline: none;
   border-radius: 10px;
+  transition: 0.3s;
 
   &_green {
     background-color: @green;
     color: @white;
+
+    &:hover {
+      background-color: fade(@green, 70%);
+    }
   }
 }

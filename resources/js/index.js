@@ -11,6 +11,7 @@ import map from './modules/map';
 import tables from './modules/tables';
 import catalog from './modules/catalog';
 import filter from './modules/filter';
+import modal from './modules/modal';
 
 //Вызов карты будет работать только вне всех конструкций
 map();
@@ -22,4 +23,5 @@ $(document).ready(function () {
   tables();
   catalog();
   filter();
+  modal();
 });
