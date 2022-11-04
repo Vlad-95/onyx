@@ -3,6 +3,7 @@ import 'slick-carousel';
 import { Fancybox } from '@fancyapps/ui/src/Fancybox/Fancybox.js';
 import 'jquery-match-height';
 import 'select2';
+import 'jquery-mask-plugin';
 
 import intro from './modules/intro';
 import menu from './modules/menu';

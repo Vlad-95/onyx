@@ -28,6 +28,9 @@ const modal = () => {
     });
   }
 
+  //маска телефона
+  $('.form .js-phone').mask('+7 (000) 000-0000');
+
   //показ имени файла
   $('.form__file .add').on('click', function () {
     $(this).parent().find('input').trigger('click');
