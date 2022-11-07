@@ -2,6 +2,13 @@ import $ from 'jquery';
 
 const filter = () => {
   if ($('.filter').length) {
+    //показ/скрытие
+    $('.filter-toggle').on('click', function () {
+      $(this).toggleClass('active');
+
+      $('.filter').slideToggle();
+    });
+
     $('.filter .select').each(function () {
       let elem = $(this);
       $(this).select2({

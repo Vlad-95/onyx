@@ -2,6 +2,13 @@
   padding-bottom: 106px;
 
   .wysiwyg {
+    h2,
+    h3,
+    h4,
+    h5 {
+      margin: 55px 0 30px;
+    }
+
     ul {
       li {
         padding-left: 21px;
@@ -116,6 +123,10 @@
             max-width: 100px;
           }
 
+          &.wave {
+            max-width: 100px;
+          }
+
           &.size {
             max-width: 100px;
           }
@@ -143,6 +154,32 @@
 
   &__wrap {
     display: flex;
+
+    .filter-toggle {
+      font-size: 20px;
+      color: @green;
+      position: relative;
+      padding-right: 20px;
+      display: none;
+      margin-bottom: 20px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 7px;
+        background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 7.99994C6.8684 8.0007 6.73793 7.97548 6.6161 7.92571C6.49426 7.87595 6.38344 7.80262 6.29 7.70994L1.29 2.70994C1.1017 2.52164 0.995911 2.26624 0.995911 1.99994C0.995911 1.73364 1.1017 1.47824 1.29 1.28994C1.47831 1.10164 1.7337 0.99585 2 0.99585C2.2663 0.99585 2.5217 1.10164 2.71 1.28994L7 5.58994L11.29 1.28994C11.4783 1.10164 11.7337 0.99585 12 0.99585C12.2663 0.99585 12.5217 1.10164 12.71 1.28994C12.8983 1.47824 13.0041 1.73364 13.0041 1.99994C13.0041 2.26624 12.8983 2.52164 12.71 2.70994L7.71 7.70994C7.61656 7.80262 7.50575 7.87595 7.38391 7.92571C7.26207 7.97548 7.13161 8.0007 7 7.99994Z' fill='#b0c468'/%3E%3C/svg%3E%0A");
+        height: 8px;
+        width: 14px;
+        transition: 0.3s;
+      }
+
+      &.active {
+        &:after {
+          transform: rotate(180deg);
+        }
+      }
+    }
 
     .filter {
       width: 210px;
@@ -210,6 +247,10 @@
               max-width: none;
             }
 
+            &.wave {
+              max-width: none;
+            }
+
             &.size {
               max-width: none;
             }
@@ -221,21 +262,38 @@
     &__wrap {
       display: block;
 
+      .filter-toggle {
+        display: inline-block;
+      }
+
       .filter {
-        width: calc(100% + 30px);
+        width: 100%;
         border: none;
         border-bottom: 1px solid #e3e7e9;
         padding: 0;
         padding-bottom: 0;
         margin-bottom: 30px;
-        margin-left: -15px;
-        margin-right: -15px;
-        display: flex;
-        flex-wrap: wrap;
+        display: none;
+
+        &__wrap {
+          margin-left: -15px;
+          margin-right: -15px;
+          display: flex;
+          flex-wrap: wrap;
+        }
 
         &__item {
           width: calc((100% / 4) - 30px);
           margin: 0 15px 30px;
+        }
+
+        .text {
+          width: 100%;
+          margin: 0 15px;
+        }
+
+        .btn {
+          margin: 19px 15px;
         }
       }
 

@@ -8474,6 +8474,11 @@ var filter = function filter() {
       }
     };
 
+    //показ/скрытие
+    jquery__WEBPACK_IMPORTED_MODULE_4___default()('.filter-toggle').on('click', function () {
+      jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).toggleClass('active');
+      jquery__WEBPACK_IMPORTED_MODULE_4___default()('.filter').slideToggle();
+    });
     jquery__WEBPACK_IMPORTED_MODULE_4___default()('.filter .select').each(function () {
       var elem = jquery__WEBPACK_IMPORTED_MODULE_4___default()(this);
       jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).select2({
@@ -8796,12 +8801,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function openMenu() {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('no-scroll');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('no-scroll opacity-layer');
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.mobile-menu').fadeIn();
 }
 
 function closeMenu() {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('no-scroll');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('no-scroll opacity-layer');
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.mobile-menu').fadeOut();
 }
 

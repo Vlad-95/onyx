@@ -35,6 +35,14 @@
     .select2-container {
       width: 100%;
 
+      &.select2-container--open {
+        .select2-selection__arrow {
+          b {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
       &.select2-container--default {
         .select2-selection--single {
           background-color: #fff;
@@ -63,6 +71,7 @@
               left: 0;
               right: 0;
               bottom: 0;
+              transition: 0.3s;
             }
           }
         }

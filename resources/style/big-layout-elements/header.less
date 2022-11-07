@@ -54,6 +54,10 @@
         padding: 40px 16px;
         transition: 0.3s;
 
+        &.current {
+          background-color: @green;
+        }
+
         &.dropdown {
           padding-right: 35px;
         }
@@ -167,6 +171,12 @@
       .menu__item {
         position: relative;
         padding: 10px 0;
+
+        &.current {
+          & > a {
+            color: @green;
+          }
+        }
 
         & > .toggle {
           right: 0;
